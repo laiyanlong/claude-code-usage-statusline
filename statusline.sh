@@ -121,7 +121,10 @@ make_bar() {
   for (( i=0; i<full_blocks; i++ )); do
     col=$(cell_color "$i" "$width")
     if [ "$i" -eq "$wave_idx" ]; then
-      bar="${bar}$(printf "\033[1;38;5;%sm█\033[0m" "$col")"   # bright
+      # Wave: render this cell as a clearly different character so the
+      # moving position is visible even on light pastel cells where
+      # bold text would be invisible.
+      bar="${bar}$(printf "\033[38;5;%sm▒\033[0m" "$col")"
     elif [ "$i" -ge $(( full_blocks - 1 )) ] && [ -n "$danger_blink" ]; then
       bar="${bar}$(printf "${danger_blink}\033[38;5;%sm█\033[0m" "$col")"
     else
