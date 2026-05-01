@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 130" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', Menlo, Consolas, monospace" font-size="15">
+  <rect width="100%" height="100%" rx="10" ry="10" fill="#1a1b26"/>
+
+  <!-- window dots -->
+  <circle cx="22" cy="22" r="6" fill="#ff5f56"/>
+  <circle cx="42" cy="22" r="6" fill="#ffbd2e"/>
+  <circle cx="62" cy="22" r="6" fill="#27c93f"/>
+  <text x="86" y="27" fill="#7a7c8c" font-size="13">claude-code-usage-statusline · live preview</text>
+
+  <!-- Frame 1: LOW 18% -->
+  <g>
+    <animate attributeName="opacity"
+      values="1;1;0;0;0;0;1"
+      keyTimes="0;0.31;0.34;0.64;0.67;0.97;1"
+      dur="9s" repeatCount="indefinite"/>
+    <text x="20" y="78" xml:space="preserve">
+      <tspan fill="#7a7c8c">$ </tspan>
+      <tspan fill="#3b82f6" font-weight="bold">~/git/products</tspan>
+      <tspan fill="#3b82f6"> git:(</tspan><tspan fill="#e06c75">main</tspan><tspan fill="#3b82f6">)</tspan>
+      <tspan fill="#875F5F"> │ </tspan>
+      <tspan fill="#D7875F">Sonnet 4.6</tspan>
+      <tspan fill="#875F5F"> │ </tspan>
+      <tspan fill="#FFD7AF">5h [</tspan><tspan fill="#FFD7AF">██▌</tspan><tspan fill="#5A5A5A">░░░░░░░░░░░░░</tspan><tspan fill="#FFD7AF">]  18% ⏰3h20m</tspan>
+      <tspan fill="#875F5F"> │ </tspan>
+      <tspan fill="#FFD7AF">7d [</tspan><tspan fill="#FFD7AF">█▌</tspan><tspan fill="#5A5A5A">░░░░░░░░░░░░░░</tspan><tspan fill="#FFD7AF">]  12% ⏰5d12h</tspan>
+      <tspan fill="#875F5F"> │ </tspan>
+      <tspan fill="#FFD7AF">ctx [</tspan><tspan fill="#FFD7AF">█▌</tspan><tspan fill="#5A5A5A">░░░░░░░░░░░░░░</tspan><tspan fill="#FFD7AF">]   8%</tspan>
+    </text>
+  </g>
+
+  <!-- Frame 2: MID 55% (dirty) -->
+  <g>
+    <animate attributeName="opacity"
+      values="0;0;1;1;0;0;0"
+      keyTimes="0;0.31;0.34;0.64;0.67;0.97;1"
+      dur="9s" repeatCount="indefinite"/>
+    <text x="20" y="78" xml:space="preserve">
+      <tspan fill="#7a7c8c">$ </tspan>
+      <tspan fill="#3b82f6" font-weight="bold">~/git/products</tspan>
+      <tspan fill="#3b82f6"> git:(</tspan><tspan fill="#e06c75">main</tspan><tspan fill="#3b82f6">)</tspan>
+      <tspan fill="#e5c07b"> *</tspan>
+      <tspan fill="#875F5F"> │ </tspan>
+      <tspan fill="#D7875F">Sonnet 4.6</tspan>
+      <tspan fill="#875F5F"> │ </tspan>
+      <tspan fill="#D7875F">5h [</tspan><tspan fill="#FFD7AF">████</tspan><tspan fill="#FFAF87">███</tspan><tspan fill="#D7875F">█▌</tspan><tspan fill="#5A5A5A">░░░░░░░</tspan><tspan fill="#D7875F">]  55% ⏰1h30m</tspan>
+      <tspan fill="#875F5F"> │ </tspan>
+      <tspan fill="#FFAF87">7d [</tspan><tspan fill="#FFD7AF">████</tspan><tspan fill="#FFAF87">█▌</tspan><tspan fill="#5A5A5A">░░░░░░░░░░</tspan><tspan fill="#FFAF87">]  34% ⏰2d08h</tspan>
+      <tspan fill="#875F5F"> │ </tspan>
+      <tspan fill="#D7875F">ctx [</tspan><tspan fill="#FFD7AF">████</tspan><tspan fill="#FFAF87">███</tspan><tspan fill="#D7875F">█▌</tspan><tspan fill="#5A5A5A">░░░░░░░</tspan><tspan fill="#D7875F">]  55%</tspan>
+    </text>
+  </g>
+
+  <!-- Frame 3: HIGH 92% -->
+  <g>
+    <animate attributeName="opacity"
+      values="0;0;0;0;1;1;0"
+      keyTimes="0;0.31;0.34;0.64;0.67;0.97;1"
+      dur="9s" repeatCount="indefinite"/>
+    <text x="20" y="78" xml:space="preserve">
+      <tspan fill="#7a7c8c">$ </tspan>
+      <tspan fill="#3b82f6" font-weight="bold">~/git/products</tspan>
+      <tspan fill="#3b82f6"> git:(</tspan><tspan fill="#e06c75">main</tspan><tspan fill="#3b82f6">)</tspan>
+      <tspan fill="#875F5F"> │ </tspan>
+      <tspan fill="#D7875F">Opus 4.7</tspan>
+      <tspan fill="#875F5F"> │ </tspan>
+      <tspan fill="#AF0000">5h [</tspan><tspan fill="#FFD7AF">████</tspan><tspan fill="#FFAF87">███</tspan><tspan fill="#D7875F">███</tspan><tspan fill="#D75F00">███</tspan><tspan fill="#AF0000">█▌</tspan><tspan fill="#5A5A5A">░</tspan><tspan fill="#AF0000">]  92% ⏰0h08m</tspan>
+      <tspan fill="#875F5F"> │ </tspan>
+      <tspan fill="#D75F00">7d [</tspan><tspan fill="#FFD7AF">████</tspan><tspan fill="#FFAF87">███</tspan><tspan fill="#D7875F">███</tspan><tspan fill="#D75F00">██▌</tspan><tspan fill="#5A5A5A">░░░</tspan><tspan fill="#D75F00">]  78% ⏰0d22h</tspan>
+      <tspan fill="#875F5F"> │ </tspan>
+      <tspan fill="#D75F00">ctx [</tspan><tspan fill="#FFD7AF">████</tspan><tspan fill="#FFAF87">███</tspan><tspan fill="#D7875F">███</tspan><tspan fill="#D75F00">██▌</tspan><tspan fill="#5A5A5A">░░░</tspan><tspan fill="#D75F00">]  78%</tspan>
+    </text>
+  </g>
+
+  <!-- frame indicator -->
+  <g transform="translate(20, 110)">
+    <rect x="0"   y="0" width="380" height="3" rx="1" fill="#2a2c3c"/>
+    <rect x="0"   y="0" width="120" height="3" rx="1" fill="#FFD7AF">
+      <animate attributeName="x" values="0;130;260;0" keyTimes="0;0.333;0.667;1" dur="9s" repeatCount="indefinite"/>
+      <animate attributeName="fill" values="#FFD7AF;#D7875F;#AF0000;#FFD7AF" keyTimes="0;0.333;0.667;1" dur="9s" repeatCount="indefinite"/>
+    </rect>
+    <text x="0"   y="22" font-size="11" fill="#7a7c8c">low 18%</text>
+    <text x="130" y="22" font-size="11" fill="#7a7c8c">mid 55% · dirty</text>
+    <text x="280" y="22" font-size="11" fill="#7a7c8c">high 92%</text>
+  </g>
+</svg>

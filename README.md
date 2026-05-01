@@ -7,6 +7,15 @@ that shows your token usage and rate-limit reset timers right above the prompt.
   <img src="docs/demo.svg" alt="claude-code-usage-statusline preview — three rows showing low / mid / high usage states with the Anthropic warm gradient" width="100%">
 </p>
 
+<details>
+<summary><b>▶ Show animated preview</b> (click to expand)</summary>
+
+<p align="center">
+  <img src="docs/demo-animated.svg" alt="Animated preview cycling between low / mid / high usage states" width="100%">
+</p>
+
+</details>
+
 ```text
 ~/git/products git:(main) * │ Sonnet 4.6 │ 5h [████████▌░░░░░░░]  55% ⏰1h30m │ 7d [████▌░░░░░░░░░░░]  28% ⏰2d08h │ ctx [██▌░░░░░░░░░░░░░]  18%
 ```
@@ -110,6 +119,28 @@ from `~/.claude/settings.json`.
 You're on Claude Code &lt; v2.1.92, which doesn't expose `rate_limits` in the
 statusLine stdin payload. Update Claude Code; the script auto-detects and
 hides the section gracefully on older builds.
+
+## Comparison
+
+| Feature                          | this repo | [ccusage] | [claude-statusbar] | [claude-code-usage-bar] | [ccstatusline] |
+| -------------------------------- | :-------: | :-------: | :----------------: | :---------------------: | :------------: |
+| Renders inside Claude Code       |     ✅     |     ✅     |          ✅         |            ✅            |        ✅       |
+| 5h / 7d rate-limit bars          |     ✅     |     ✅¹    |          ✅         |            ✅            |        ❌       |
+| Reset countdown timer            |     ✅     |     ✅     |          ✅         |            ✅            |        ❌       |
+| Context window bar               |     ✅     |     ❌     |          ✅         |            ✅            |        ✅       |
+| Per-cell gradient bar            |     ✅     |     ❌     |          ❌         |            ❌            |        ❌       |
+| Half-block (`▌`) precision       |     ✅     |     ❌     |          ❌         |            ❌            |        ❌       |
+| Anthropic brand palette          |     ✅     |     ❌     |          ❌         |            ❌            |        ❌       |
+| Single bash file, no runtime dep |     ✅     |     ❌²    |          ❌²        |            ❌²           |        ❌²      |
+| Cost / spend display             |     ❌     |     ✅     |          ❌         |            ✅            |        ✅       |
+| Sub-100 ms render                |     ✅     |     ❌     |          ❌         |            ❌            |        ❌       |
+
+<sub>¹ via 5-hour billing block window. ² Node / Python / Go runtime required.</sub>
+
+[ccusage]: https://github.com/ryoppippi/ccusage
+[claude-statusbar]: https://pypi.org/project/claude-statusbar/
+[claude-code-usage-bar]: https://github.com/leeguooooo/claude-code-usage-bar
+[ccstatusline]: https://github.com/sirmalloc/ccstatusline
 
 ## Acknowledgements
 
