@@ -3,9 +3,17 @@
 A warm, Anthropic-branded **statusLine** for [Claude Code](https://code.claude.com)
 that shows your token usage and rate-limit reset timers right above the prompt.
 
+<p align="center">
+  <img src="docs/demo.svg" alt="claude-code-usage-statusline preview — three rows showing low / mid / high usage states with the Anthropic warm gradient" width="100%">
+</p>
+
 ```text
 ~/git/products git:(main) * │ Sonnet 4.6 │ 5h [████████▌░░░░░░░]  55% ⏰1h30m │ 7d [████▌░░░░░░░░░░░]  28% ⏰2d08h │ ctx [██▌░░░░░░░░░░░░░]  18%
 ```
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Claude Code](https://img.shields.io/badge/Claude%20Code-v2.1.92%2B-D97757)](https://code.claude.com)
+[![Shell](https://img.shields.io/badge/Shell-bash-89e051)](statusline.sh)
 
 - **5h / 7d rate limits** with usage bar + reset countdown
 - **Context window** usage bar

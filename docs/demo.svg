@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 260" font-family="ui-monospace, SFMono-Regular, 'JetBrains Mono', Menlo, Consolas, monospace" font-size="15">
+  <rect width="100%" height="100%" rx="10" ry="10" fill="#1a1b26"/>
+
+  <!-- window dots -->
+  <circle cx="22" cy="22" r="6" fill="#ff5f56"/>
+  <circle cx="42" cy="22" r="6" fill="#ffbd2e"/>
+  <circle cx="62" cy="22" r="6" fill="#27c93f"/>
+
+  <!-- caption -->
+  <text x="86" y="27" fill="#7a7c8c">claude-code-usage-statusline</text>
+
+  <!-- LOW (18%) -->
+  <text x="20" y="78" xml:space="preserve">
+    <tspan fill="#7a7c8c">$ </tspan>
+    <tspan fill="#3b82f6" font-weight="bold">~/git/products</tspan>
+    <tspan fill="#3b82f6"> git:(</tspan><tspan fill="#e06c75">main</tspan><tspan fill="#3b82f6">)</tspan>
+    <tspan fill="#875F5F"> │ </tspan>
+    <tspan fill="#D7875F">Sonnet 4.6</tspan>
+    <tspan fill="#875F5F"> │ </tspan>
+    <tspan fill="#FFD7AF">5h [</tspan><tspan fill="#FFD7AF">██▌</tspan><tspan fill="#5A5A5A">░░░░░░░░░░░░░</tspan><tspan fill="#FFD7AF">]  18% ⏰3h20m</tspan>
+    <tspan fill="#875F5F"> │ </tspan>
+    <tspan fill="#FFD7AF">7d [</tspan><tspan fill="#FFD7AF">█▌</tspan><tspan fill="#5A5A5A">░░░░░░░░░░░░░░</tspan><tspan fill="#FFD7AF">]  12% ⏰5d12h</tspan>
+    <tspan fill="#875F5F"> │ </tspan>
+    <tspan fill="#FFD7AF">ctx [</tspan><tspan fill="#FFD7AF">█▌</tspan><tspan fill="#5A5A5A">░░░░░░░░░░░░░░</tspan><tspan fill="#FFD7AF">]   8%</tspan>
+  </text>
+
+  <!-- MID (55%, dirty) -->
+  <text x="20" y="120" xml:space="preserve">
+    <tspan fill="#7a7c8c">$ </tspan>
+    <tspan fill="#3b82f6" font-weight="bold">~/git/products</tspan>
+    <tspan fill="#3b82f6"> git:(</tspan><tspan fill="#e06c75">main</tspan><tspan fill="#3b82f6">)</tspan>
+    <tspan fill="#e5c07b"> *</tspan>
+    <tspan fill="#875F5F"> │ </tspan>
+    <tspan fill="#D7875F">Sonnet 4.6</tspan>
+    <tspan fill="#875F5F"> │ </tspan>
+    <tspan fill="#D7875F">5h [</tspan><tspan fill="#FFD7AF">████</tspan><tspan fill="#FFAF87">███</tspan><tspan fill="#D7875F">█▌</tspan><tspan fill="#5A5A5A">░░░░░░░</tspan><tspan fill="#D7875F">]  55% ⏰1h30m</tspan>
+    <tspan fill="#875F5F"> │ </tspan>
+    <tspan fill="#FFAF87">7d [</tspan><tspan fill="#FFD7AF">████</tspan><tspan fill="#FFAF87">█▌</tspan><tspan fill="#5A5A5A">░░░░░░░░░░</tspan><tspan fill="#FFAF87">]  34% ⏰2d08h</tspan>
+    <tspan fill="#875F5F"> │ </tspan>
+    <tspan fill="#D7875F">ctx [</tspan><tspan fill="#FFD7AF">████</tspan><tspan fill="#FFAF87">███</tspan><tspan fill="#D7875F">█▌</tspan><tspan fill="#5A5A5A">░░░░░░░</tspan><tspan fill="#D7875F">]  55%</tspan>
+  </text>
+
+  <!-- HIGH (92%) -->
+  <text x="20" y="162" xml:space="preserve">
+    <tspan fill="#7a7c8c">$ </tspan>
+    <tspan fill="#3b82f6" font-weight="bold">~/git/products</tspan>
+    <tspan fill="#3b82f6"> git:(</tspan><tspan fill="#e06c75">main</tspan><tspan fill="#3b82f6">)</tspan>
+    <tspan fill="#875F5F"> │ </tspan>
+    <tspan fill="#D7875F">Opus 4.7</tspan>
+    <tspan fill="#875F5F"> │ </tspan>
+    <tspan fill="#AF0000">5h [</tspan><tspan fill="#FFD7AF">████</tspan><tspan fill="#FFAF87">███</tspan><tspan fill="#D7875F">███</tspan><tspan fill="#D75F00">███</tspan><tspan fill="#AF0000">█▌</tspan><tspan fill="#5A5A5A">░</tspan><tspan fill="#AF0000">]  92% ⏰0h08m</tspan>
+    <tspan fill="#875F5F"> │ </tspan>
+    <tspan fill="#D75F00">7d [</tspan><tspan fill="#FFD7AF">████</tspan><tspan fill="#FFAF87">███</tspan><tspan fill="#D7875F">███</tspan><tspan fill="#D75F00">██▌</tspan><tspan fill="#5A5A5A">░░░</tspan><tspan fill="#D75F00">]  78% ⏰0d22h</tspan>
+    <tspan fill="#875F5F"> │ </tspan>
+    <tspan fill="#D75F00">ctx [</tspan><tspan fill="#FFD7AF">████</tspan><tspan fill="#FFAF87">███</tspan><tspan fill="#D7875F">███</tspan><tspan fill="#D75F00">██▌</tspan><tspan fill="#5A5A5A">░░░</tspan><tspan fill="#D75F00">]  78%</tspan>
+  </text>
+
+  <!-- gradient legend -->
+  <text x="20" y="218" font-size="13" fill="#7a7c8c" xml:space="preserve">gradient:  </text>
+  <g transform="translate(105 207)">
+    <rect x="0"   y="0" width="56" height="14" fill="#FFD7AF"/>
+    <rect x="56"  y="0" width="56" height="14" fill="#FFAF87"/>
+    <rect x="112" y="0" width="56" height="14" fill="#D7875F"/>
+    <rect x="168" y="0" width="56" height="14" fill="#D75F00"/>
+    <rect x="224" y="0" width="56" height="14" fill="#AF0000"/>
+    <text x="0"   y="34" font-size="11" fill="#7a7c8c">0–25%</text>
+    <text x="56"  y="34" font-size="11" fill="#7a7c8c">25–45%</text>
+    <text x="112" y="34" font-size="11" fill="#7a7c8c">45–65%</text>
+    <text x="168" y="34" font-size="11" fill="#7a7c8c">65–85%</text>
+    <text x="224" y="34" font-size="11" fill="#7a7c8c">85–100%</text>
+  </g>
+  <text x="410" y="218" font-size="13" fill="#7a7c8c">light apricot → sand → Claude orange → terracotta → crimson</text>
+</svg>
