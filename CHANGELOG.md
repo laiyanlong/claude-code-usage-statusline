@@ -5,6 +5,29 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.0] - 2026-05-01
+
+### Added
+
+- **Environment-variable customisation** — no need to edit the script:
+  - `STATUSLINE_BAR_WIDTH` — bar cell count (default 16).
+  - `STATUSLINE_THEME` — `warm` (default) · `classic` · `neon` · `mono`.
+  - `STATUSLINE_PULSE` — `0` static · `1` blink danger cells (≥85%) · `2`
+    wave animation that walks across the bar each second.
+  - `STATUSLINE_HIDE` — comma list to skip sections (e.g. `7d,ctx,path`).
+  - `STATUSLINE_HALF_BLOCK` — half-cell character (`▌`/`▎`/`▊`/…).
+  - `STATUSLINE_SEP` — section separator character (`│`/`•`/`▸`/…).
+- 5-frame animated SVG preview with crossfade and a blinking danger cell.
+- Comparison table in README vs. `ccusage`, `claude-statusbar`,
+  `claude-code-usage-bar`, `ccstatusline`.
+
+### Changed
+
+- Theme colour stops are now driven by lookup variables `C0..C4` and
+  `ACCENT`, making it trivial to add new themes.
+
+[0.2.0]: https://github.com/laiyanlong/claude-code-usage-statusline/releases/tag/v0.2.0
+
 ## [0.1.0] - 2026-05-01
 
 ### Added

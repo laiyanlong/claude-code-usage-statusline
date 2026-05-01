@@ -97,13 +97,55 @@ a glance tells you the severity.
 
 ## Customise
 
-Edit `~/.claude/statusline.sh` directly. Common tweaks:
+Set environment variables on the `command` line in `~/.claude/settings.json`.
+Nothing else needs editing.
 
-- **Bar width** — change `width="${2:-16}"` in `make_bar` to 8, 24, etc.
-- **Gradient stops** — adjust the cutoffs in `cell_color()` and `pct_color()`.
-- **Half-block character** — replace `▌` with `▎` (¼) or `▊` (¾) for different
-  resolution.
-- **Hide a section** — comment out the `5h` / `7d` / `ctx` block.
+```json
+{
+  "statusLine": {
+    "type": "command",
+    "command": "STATUSLINE_PULSE=1 STATUSLINE_THEME=warm bash ~/.claude/statusline.sh"
+  }
+}
+```
+
+| Variable                  | Default | Values                                  | Effect                                                 |
+| ------------------------- | ------- | --------------------------------------- | ------------------------------------------------------ |
+| `STATUSLINE_BAR_WIDTH`    | `16`    | any integer (8 / 24 / 32 …)             | Number of cells per bar.                               |
+| `STATUSLINE_THEME`        | `warm`  | `warm` · `classic` · `neon` · `mono`    | Gradient palette (see below).                          |
+| `STATUSLINE_PULSE`        | `0`     | `0` · `1` · `2`                         | Animation. `1` = blink danger ≥85%. `2` = wave effect. |
+| `STATUSLINE_HIDE`         | `""`    | comma list: `5h,7d,ctx,model,git,path`  | Skip sections you don't want.                          |
+| `STATUSLINE_HALF_BLOCK`   | `▌`     | `▌` · `▎` · `▊` · any block char        | Half-cell character.                                   |
+| `STATUSLINE_SEP`          | `│`     | `│` · `•` · `▸` · `⋯` · any char        | Section separator.                                     |
+
+### Themes
+
+| Theme     | Gradient (low → high)                                                     |
+| --------- | ------------------------------------------------------------------------- |
+| `warm`    | apricot → sand → Claude orange → terracotta → crimson  (Anthropic brand) |
+| `classic` | green → yellow → orange → red                                             |
+| `neon`    | cyan → bright-cyan → magenta → pink → violet                              |
+| `mono`    | white → grey ramps                                                        |
+
+### Animation: `STATUSLINE_PULSE`
+
+- `0` (default) — fully static.
+- `1` — when any meter is **≥85%**, the rightmost filled cell uses ANSI blink
+  (`\033[5m`). Modern terminals (iTerm2, Terminal.app, Kitty, Wezterm,
+  Alacritty) honour blink; some Linux terminals don't.
+- `2` — **wave**: a brighter cell walks across each filled bar, advancing once
+  per second. Subtle, looks alive on any terminal.
+
+Both modes only animate while Claude Code refreshes the statusLine (after
+each prompt event), so they pulse rather than continuously animate.
+
+### Hide what you don't need
+
+```bash
+STATUSLINE_HIDE=7d,ctx       # keep cwd · git · model · 5h
+STATUSLINE_HIDE=path,git     # keep model · 5h · 7d · ctx — minimalist
+STATUSLINE_HIDE=model        # numbers only
+```
 
 ## Uninstall
 
