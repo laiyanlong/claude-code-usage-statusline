@@ -1,0 +1,13 @@
+{
+  "name": "claude-code-usage-statusline",
+  "version": "0.1.0",
+  "description": "Warm Anthropic-branded statusLine for Claude Code: shows model, 5h/7d rate limits with reset countdown, context window — all as 16-cell gradient bars.",
+  "author": {
+    "name": "Yan Lai",
+    "url": "https://github.com/laiyanlong"
+  },
+  "homepage": "https://github.com/laiyanlong/claude-code-usage-statusline",
+  "repository": "https://github.com/laiyanlong/claude-code-usage-statusline",
+  "license": "MIT",
+  "keywords": ["claude-code", "statusline", "usage", "rate-limit", "monitor"]
+}
